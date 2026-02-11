@@ -9,4 +9,4 @@ structlog==23.2.0
 grpcio==1.59.3
 grpcio-tools==1.59.3
 grpcio-health-checking==1.59.3
-consul==1.1.0
+python-consul==1.1.0
