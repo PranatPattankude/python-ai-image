@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip
 
 # Install heavy AI deps
-COPY requirements-ai.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 # ---------- Stage 2: Runtime image ----------
