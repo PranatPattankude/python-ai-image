@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - aegis
+      - aegis-slim
   workflow_dispatch:
 
 jobs:
@@ -23,9 +23,9 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t ${{ vars.DOCKER_USERNAME }}/aegis-app:py3.11 \
+            -t ${{ vars.DOCKER_USERNAME }}/aegis-app:py3.11-slim \
             .
 
       - name: Push Docker image
         run: |
-          docker push ${{ vars.DOCKER_USERNAME }}/aegis-app:py3.11
+          docker push ${{ vars.DOCKER_USERNAME }}/aegis-app:py3.11-slim
