@@ -14,12 +14,7 @@ RUN pip install --upgrade pip
 
 # Install heavy AI deps
 COPY requirements-ai.txt .
-RUN pip install --no-cache-dir --prefix=/install -r requirements-ai.txt
-
-# Install lightweight app deps
-COPY requirements-app.txt .
-RUN pip install --no-cache-dir --prefix=/install -r requirements-app.txt
-
+RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 # ---------- Stage 2: Runtime image ----------
 FROM python:3.10-slim
